@@ -38,6 +38,20 @@ class TestWithForm extends React.Component {
   }
 }
 
+class TestWithMatcher extends React.Component {
+  render() {
+    return (
+      <div className='test-class'>
+        <span />
+        <div className='test-class1' />
+        <div className='test-class2' />
+        <div className='test-class2' />
+        <div className='test-class3' />
+      </div>
+    );
+  }
+}
+
 describe('`findAll`', function() {
   beforeEach(function() {
     this.renderer = createRenderer();
@@ -73,4 +87,30 @@ describe('`findAll`', function() {
       }
     });
   });
+
+  describe('matcher', function() {
+    beforeEach(function() {
+      this.renderer = createRenderer();
+      this.tree = this.renderer.render(<TestWithMatcher />);
+    });
+
+    it('should find two matching components', function() {
+      const found = findAll(this.tree, c => {
+        return c.props && c.props.className === 'test-class2';
+      });
+
+      expect(found.length).toBe(2);
+    });
+
+    it('should find no matching components', function() {
+      const found = findAll(this.tree, c => {
+        return c.props && c.props.className === 'test-class4';
+      });
+
+      expect(found.length).toBe(0);
+    });
+
+  });
+
+
 });
