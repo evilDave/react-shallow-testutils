@@ -1,6 +1,6 @@
 {
   "name": "react-shallow-testutils",
-  "version": "3.0.0",
+  "version": "3.0.1",
   "description": "Replacement for TestUtils when using React's shallow rendering",
   "main": "lib/index.js",
   "scripts": {
@@ -16,7 +16,7 @@
   ],
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/sheepsteak/react-shallow-testutils.git"
+    "url": "git+https://github.com/evildave/react-shallow-testutils.git"
   },
   "keywords": [
     "React",
@@ -26,9 +26,9 @@
   "author": "Chris Shepherd <chris@chrisshepherd.me>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/sheepsteak/react-shallow-testutils/issues"
+    "url": "https://github.com/evildave/react-shallow-testutils/issues"
   },
-  "homepage": "https://github.com/sheepsteak/react-shallow-testutils#readme",
+  "homepage": "https://github.com/evildave/react-shallow-testutils#readme",
   "devDependencies": {
     "babel-cli": "^6.7.5",
     "babel-core": "^6.7.6",
